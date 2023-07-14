@@ -1,0 +1,607 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8C5E11212A60CC770038A012 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5E11202A60CC770038A012 /* AppDelegate.swift */; };
+		8C5E11232A60CC770038A012 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5E11222A60CC770038A012 /* SceneDelegate.swift */; };
+		8C5E11252A60CC770038A012 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5E11242A60CC770038A012 /* ViewController.swift */; };
+		8C5E11282A60CC770038A012 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C5E11262A60CC770038A012 /* Main.storyboard */; };
+		8C5E112A2A60CC790038A012 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C5E11292A60CC790038A012 /* Assets.xcassets */; };
+		8C5E112D2A60CC790038A012 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C5E112B2A60CC790038A012 /* LaunchScreen.storyboard */; };
+		8C5E11382A60CC7A0038A012 /* MeliTestAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5E11372A60CC7A0038A012 /* MeliTestAppTests.swift */; };
+		8C5E11422A60CC7A0038A012 /* MeliTestAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5E11412A60CC7A0038A012 /* MeliTestAppUITests.swift */; };
+		8C5E11442A60CC7A0038A012 /* MeliTestAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5E11432A60CC7A0038A012 /* MeliTestAppUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8C5E11342A60CC7A0038A012 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8C5E11152A60CC770038A012 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8C5E111C2A60CC770038A012;
+			remoteInfo = MeliTestApp;
+		};
+		8C5E113E2A60CC7A0038A012 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8C5E11152A60CC770038A012 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8C5E111C2A60CC770038A012;
+			remoteInfo = MeliTestApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8C5E111D2A60CC770038A012 /* MeliTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeliTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C5E11202A60CC770038A012 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8C5E11222A60CC770038A012 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		8C5E11242A60CC770038A012 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8C5E11272A60CC770038A012 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8C5E11292A60CC790038A012 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8C5E112C2A60CC790038A012 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8C5E112E2A60CC790038A012 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C5E11332A60CC7A0038A012 /* MeliTestAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeliTestAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C5E11372A60CC7A0038A012 /* MeliTestAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeliTestAppTests.swift; sourceTree = "<group>"; };
+		8C5E113D2A60CC7A0038A012 /* MeliTestAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeliTestAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C5E11412A60CC7A0038A012 /* MeliTestAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeliTestAppUITests.swift; sourceTree = "<group>"; };
+		8C5E11432A60CC7A0038A012 /* MeliTestAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeliTestAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8C5E111A2A60CC770038A012 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C5E11302A60CC7A0038A012 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C5E113A2A60CC7A0038A012 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8C5E11142A60CC770038A012 = {
+			isa = PBXGroup;
+			children = (
+				8C5E111F2A60CC770038A012 /* MeliTestApp */,
+				8C5E11362A60CC7A0038A012 /* MeliTestAppTests */,
+				8C5E11402A60CC7A0038A012 /* MeliTestAppUITests */,
+				8C5E111E2A60CC770038A012 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8C5E111E2A60CC770038A012 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8C5E111D2A60CC770038A012 /* MeliTestApp.app */,
+				8C5E11332A60CC7A0038A012 /* MeliTestAppTests.xctest */,
+				8C5E113D2A60CC7A0038A012 /* MeliTestAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8C5E111F2A60CC770038A012 /* MeliTestApp */ = {
+			isa = PBXGroup;
+			children = (
+				8C5E11202A60CC770038A012 /* AppDelegate.swift */,
+				8C5E11222A60CC770038A012 /* SceneDelegate.swift */,
+				8C5E11242A60CC770038A012 /* ViewController.swift */,
+				8C5E11262A60CC770038A012 /* Main.storyboard */,
+				8C5E11292A60CC790038A012 /* Assets.xcassets */,
+				8C5E112B2A60CC790038A012 /* LaunchScreen.storyboard */,
+				8C5E112E2A60CC790038A012 /* Info.plist */,
+			);
+			path = MeliTestApp;
+			sourceTree = "<group>";
+		};
+		8C5E11362A60CC7A0038A012 /* MeliTestAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				8C5E11372A60CC7A0038A012 /* MeliTestAppTests.swift */,
+			);
+			path = MeliTestAppTests;
+			sourceTree = "<group>";
+		};
+		8C5E11402A60CC7A0038A012 /* MeliTestAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8C5E11412A60CC7A0038A012 /* MeliTestAppUITests.swift */,
+				8C5E11432A60CC7A0038A012 /* MeliTestAppUITestsLaunchTests.swift */,
+			);
+			path = MeliTestAppUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8C5E111C2A60CC770038A012 /* MeliTestApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8C5E11472A60CC7A0038A012 /* Build configuration list for PBXNativeTarget "MeliTestApp" */;
+			buildPhases = (
+				8C5E11192A60CC770038A012 /* Sources */,
+				8C5E111A2A60CC770038A012 /* Frameworks */,
+				8C5E111B2A60CC770038A012 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MeliTestApp;
+			productName = MeliTestApp;
+			productReference = 8C5E111D2A60CC770038A012 /* MeliTestApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8C5E11322A60CC7A0038A012 /* MeliTestAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8C5E114A2A60CC7A0038A012 /* Build configuration list for PBXNativeTarget "MeliTestAppTests" */;
+			buildPhases = (
+				8C5E112F2A60CC7A0038A012 /* Sources */,
+				8C5E11302A60CC7A0038A012 /* Frameworks */,
+				8C5E11312A60CC7A0038A012 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8C5E11352A60CC7A0038A012 /* PBXTargetDependency */,
+			);
+			name = MeliTestAppTests;
+			productName = MeliTestAppTests;
+			productReference = 8C5E11332A60CC7A0038A012 /* MeliTestAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8C5E113C2A60CC7A0038A012 /* MeliTestAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8C5E114D2A60CC7A0038A012 /* Build configuration list for PBXNativeTarget "MeliTestAppUITests" */;
+			buildPhases = (
+				8C5E11392A60CC7A0038A012 /* Sources */,
+				8C5E113A2A60CC7A0038A012 /* Frameworks */,
+				8C5E113B2A60CC7A0038A012 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8C5E113F2A60CC7A0038A012 /* PBXTargetDependency */,
+			);
+			name = MeliTestAppUITests;
+			productName = MeliTestAppUITests;
+			productReference = 8C5E113D2A60CC7A0038A012 /* MeliTestAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8C5E11152A60CC770038A012 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					8C5E111C2A60CC770038A012 = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+					8C5E11322A60CC7A0038A012 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 8C5E111C2A60CC770038A012;
+					};
+					8C5E113C2A60CC7A0038A012 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 8C5E111C2A60CC770038A012;
+					};
+				};
+			};
+			buildConfigurationList = 8C5E11182A60CC770038A012 /* Build configuration list for PBXProject "MeliTestApp" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8C5E11142A60CC770038A012;
+			productRefGroup = 8C5E111E2A60CC770038A012 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8C5E111C2A60CC770038A012 /* MeliTestApp */,
+				8C5E11322A60CC7A0038A012 /* MeliTestAppTests */,
+				8C5E113C2A60CC7A0038A012 /* MeliTestAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8C5E111B2A60CC770038A012 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C5E112D2A60CC790038A012 /* LaunchScreen.storyboard in Resources */,
+				8C5E112A2A60CC790038A012 /* Assets.xcassets in Resources */,
+				8C5E11282A60CC770038A012 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C5E11312A60CC7A0038A012 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C5E113B2A60CC7A0038A012 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8C5E11192A60CC770038A012 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C5E11252A60CC770038A012 /* ViewController.swift in Sources */,
+				8C5E11212A60CC770038A012 /* AppDelegate.swift in Sources */,
+				8C5E11232A60CC770038A012 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C5E112F2A60CC7A0038A012 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C5E11382A60CC7A0038A012 /* MeliTestAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C5E11392A60CC7A0038A012 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C5E11422A60CC7A0038A012 /* MeliTestAppUITests.swift in Sources */,
+				8C5E11442A60CC7A0038A012 /* MeliTestAppUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8C5E11352A60CC7A0038A012 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8C5E111C2A60CC770038A012 /* MeliTestApp */;
+			targetProxy = 8C5E11342A60CC7A0038A012 /* PBXContainerItemProxy */;
+		};
+		8C5E113F2A60CC7A0038A012 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8C5E111C2A60CC770038A012 /* MeliTestApp */;
+			targetProxy = 8C5E113E2A60CC7A0038A012 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8C5E11262A60CC770038A012 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8C5E11272A60CC770038A012 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8C5E112B2A60CC790038A012 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8C5E112C2A60CC790038A012 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8C5E11452A60CC7A0038A012 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8C5E11462A60CC7A0038A012 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8C5E11482A60CC7A0038A012 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LFL7VXT583;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MeliTestApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fernandofarias.MeliTestApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8C5E11492A60CC7A0038A012 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LFL7VXT583;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MeliTestApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fernandofarias.MeliTestApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		8C5E114B2A60CC7A0038A012 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LFL7VXT583;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fernandofarias.MeliTestAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MeliTestApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MeliTestApp";
+			};
+			name = Debug;
+		};
+		8C5E114C2A60CC7A0038A012 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LFL7VXT583;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fernandofarias.MeliTestAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MeliTestApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MeliTestApp";
+			};
+			name = Release;
+		};
+		8C5E114E2A60CC7A0038A012 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LFL7VXT583;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fernandofarias.MeliTestAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MeliTestApp;
+			};
+			name = Debug;
+		};
+		8C5E114F2A60CC7A0038A012 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LFL7VXT583;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fernandofarias.MeliTestAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MeliTestApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8C5E11182A60CC770038A012 /* Build configuration list for PBXProject "MeliTestApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C5E11452A60CC7A0038A012 /* Debug */,
+				8C5E11462A60CC7A0038A012 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8C5E11472A60CC7A0038A012 /* Build configuration list for PBXNativeTarget "MeliTestApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C5E11482A60CC7A0038A012 /* Debug */,
+				8C5E11492A60CC7A0038A012 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8C5E114A2A60CC7A0038A012 /* Build configuration list for PBXNativeTarget "MeliTestAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C5E114B2A60CC7A0038A012 /* Debug */,
+				8C5E114C2A60CC7A0038A012 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8C5E114D2A60CC7A0038A012 /* Build configuration list for PBXNativeTarget "MeliTestAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C5E114E2A60CC7A0038A012 /* Debug */,
+				8C5E114F2A60CC7A0038A012 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8C5E11152A60CC770038A012 /* Project object */;
+}
