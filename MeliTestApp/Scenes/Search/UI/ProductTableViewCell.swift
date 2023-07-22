@@ -8,8 +8,9 @@
 import UIKit
 
 private struct Constants {
-    static let horizontalPadding: CGFloat = 16
+    static let padding: CGFloat = 16
     static let height: CGFloat = 110
+    static let imageWidth: CGFloat = 80
 }
 
 class ProductTableViewCell: UITableViewCell {
@@ -71,22 +72,29 @@ class ProductTableViewCell: UITableViewCell {
 
     private func setupConstraints() {
         NSLayoutConstraint.activate([
-            thumbnailImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
-            thumbnailImageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 16),
-            thumbnailImageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -16),
-            thumbnailImageView.widthAnchor.constraint(equalToConstant: 80), // Adjust the width as needed
+            thumbnailImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor,
+                                                        constant: Constants.padding),
+            thumbnailImageView.topAnchor.constraint(equalTo: contentView.topAnchor,
+                                                    constant: Constants.padding),
+            thumbnailImageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor,
+                                                       constant: -Constants.padding),
+            thumbnailImageView.widthAnchor.constraint(equalToConstant: Constants.imageWidth),
 
-            container.leadingAnchor.constraint(equalTo: thumbnailImageView.trailingAnchor, constant: 16),
-            container.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 16),
-            container.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
-            container.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -16),
+            container.leadingAnchor.constraint(equalTo: thumbnailImageView.trailingAnchor,
+                                               constant: Constants.padding),
+            container.topAnchor.constraint(equalTo: contentView.topAnchor, constant: Constants.padding),
+            container.trailingAnchor.constraint(equalTo: contentView.trailingAnchor,
+                                                constant: -Constants.padding),
+            container.bottomAnchor.constraint(equalTo: contentView.bottomAnchor,
+                                              constant: -Constants.padding),
 
             titleLabel.leadingAnchor.constraint(equalTo: container.leadingAnchor),
-            titleLabel.topAnchor.constraint(equalTo: container.topAnchor),
+            titleLabel.centerYAnchor.constraint(equalTo: container.centerYAnchor,
+                                                constant: -Constants.padding),
             titleLabel.trailingAnchor.constraint(equalTo: container.trailingAnchor),
 
             priceLabel.leadingAnchor.constraint(equalTo: container.leadingAnchor),
-            priceLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 8),
+            priceLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: -8),
             priceLabel.trailingAnchor.constraint(equalTo: container.trailingAnchor),
             priceLabel.bottomAnchor.constraint(equalTo: container.bottomAnchor),
         ])
@@ -100,6 +108,6 @@ class ProductTableViewCell: UITableViewCell {
         }
 
         titleLabel.text = product.title
-        priceLabel.text = "\(product.currencyId ?? "") \(product.price ?? 0)"
+        priceLabel.text = product.price?.priceFormatter ?? "$ 0"
     }
 }

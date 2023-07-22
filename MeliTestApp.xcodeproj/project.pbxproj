@@ -24,6 +24,7 @@
 		8CCF79852A66B24900257CBA /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCF79842A66B24900257CBA /* DetailPresenter.swift */; };
 		8CCF798F2A6B582E00257CBA /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCF798E2A6B582E00257CBA /* ProductTableViewCell.swift */; };
 		8CCF79932A6B72BF00257CBA /* UIImageView+URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCF79922A6B72BF00257CBA /* UIImageView+URL.swift */; };
+		8CCF79952A6B94AC00257CBA /* Double+PriceFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCF79942A6B94AC00257CBA /* Double+PriceFormatter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		8CCF79842A66B24900257CBA /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
 		8CCF798E2A6B582E00257CBA /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
 		8CCF79922A6B72BF00257CBA /* UIImageView+URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+URL.swift"; sourceTree = "<group>"; };
+		8CCF79942A6B94AC00257CBA /* Double+PriceFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+PriceFormatter.swift"; sourceTree = "<group>"; };
 		E809F9F836D4597AD291D070 /* Pods-MeliTestApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeliTestApp.debug.xcconfig"; path = "Target Support Files/Pods-MeliTestApp/Pods-MeliTestApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -247,6 +249,7 @@
 			isa = PBXGroup;
 			children = (
 				8CCF79922A6B72BF00257CBA /* UIImageView+URL.swift */,
+				8CCF79942A6B94AC00257CBA /* Double+PriceFormatter.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -423,6 +426,7 @@
 				8C5E11542A60D3040038A012 /* Product.swift in Sources */,
 				8CCF79852A66B24900257CBA /* DetailPresenter.swift in Sources */,
 				8CCF79822A66B23700257CBA /* DetailViewController.swift in Sources */,
+				8CCF79952A6B94AC00257CBA /* Double+PriceFormatter.swift in Sources */,
 				8CCF798F2A6B582E00257CBA /* ProductTableViewCell.swift in Sources */,
 				8C5E11212A60CC770038A012 /* AppDelegate.swift in Sources */,
 				8CCF79932A6B72BF00257CBA /* UIImageView+URL.swift in Sources */,
