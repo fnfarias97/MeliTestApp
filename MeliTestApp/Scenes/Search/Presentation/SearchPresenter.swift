@@ -29,11 +29,8 @@ class SearchPresenter: SearchPresenterProtocol {
 
             switch result {
             case .success(let myQuery):
-                guard let results = myQuery.results else { return }
-                for product in results {
-                    print("Product ID: \(product.id)")
-                    print("Title: \(product.title)")
-                }
+                guard let products = myQuery.results else { return }
+                !products.isEmpty ? view?.displaySearchResults(products) : showError()
             case .failure(let error):
                 print("Error: \(error)")
             }
@@ -42,6 +39,10 @@ class SearchPresenter: SearchPresenterProtocol {
 
     func didSelectProduct(_ product: Product) {
         // TODO: Complete
+    }
+
+    func showError() {
+
     }
 
 }

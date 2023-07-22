@@ -22,6 +22,8 @@
 		8CCF797E2A66AC5500257CBA /* SearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCF797D2A66AC5500257CBA /* SearchPresenter.swift */; };
 		8CCF79822A66B23700257CBA /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCF79812A66B23700257CBA /* DetailViewController.swift */; };
 		8CCF79852A66B24900257CBA /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCF79842A66B24900257CBA /* DetailPresenter.swift */; };
+		8CCF798F2A6B582E00257CBA /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCF798E2A6B582E00257CBA /* ProductTableViewCell.swift */; };
+		8CCF79932A6B72BF00257CBA /* UIImageView+URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCF79922A6B72BF00257CBA /* UIImageView+URL.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +64,8 @@
 		8CCF797D2A66AC5500257CBA /* SearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenter.swift; sourceTree = "<group>"; };
 		8CCF79812A66B23700257CBA /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		8CCF79842A66B24900257CBA /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
+		8CCF798E2A6B582E00257CBA /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
+		8CCF79922A6B72BF00257CBA /* UIImageView+URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+URL.swift"; sourceTree = "<group>"; };
 		E809F9F836D4597AD291D070 /* Pods-MeliTestApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeliTestApp.debug.xcconfig"; path = "Target Support Files/Pods-MeliTestApp/Pods-MeliTestApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -124,6 +128,7 @@
 		8C5E111F2A60CC770038A012 /* MeliTestApp */ = {
 			isa = PBXGroup;
 			children = (
+				8CCF79902A6B72A500257CBA /* Common */,
 				8CCF79762A66AA7600257CBA /* Scenes */,
 				8C5E11502A60CDF20038A012 /* Models */,
 				8C5E11612A60D4910038A012 /* Services */,
@@ -192,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				8CCF79792A66AABC00257CBA /* SearchViewController.swift */,
+				8CCF798E2A6B582E00257CBA /* ProductTableViewCell.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -227,6 +233,22 @@
 				8CCF79842A66B24900257CBA /* DetailPresenter.swift */,
 			);
 			path = Presentation;
+			sourceTree = "<group>";
+		};
+		8CCF79902A6B72A500257CBA /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				8CCF79912A6B72AE00257CBA /* Extensions */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		8CCF79912A6B72AE00257CBA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8CCF79922A6B72BF00257CBA /* UIImageView+URL.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		F7F0635FB6C3E5073FB95E98 /* Pods */ = {
@@ -401,7 +423,9 @@
 				8C5E11542A60D3040038A012 /* Product.swift in Sources */,
 				8CCF79852A66B24900257CBA /* DetailPresenter.swift in Sources */,
 				8CCF79822A66B23700257CBA /* DetailViewController.swift in Sources */,
+				8CCF798F2A6B582E00257CBA /* ProductTableViewCell.swift in Sources */,
 				8C5E11212A60CC770038A012 /* AppDelegate.swift in Sources */,
+				8CCF79932A6B72BF00257CBA /* UIImageView+URL.swift in Sources */,
 				8C5E11232A60CC770038A012 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

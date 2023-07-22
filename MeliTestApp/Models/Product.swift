@@ -9,20 +9,20 @@ struct Product: Codable {
     let id: String?
     let title: String?
     let condition: String?
-    let listing_type_id: String?
+    let listingTypeId: String?
     let permalink: String?
-    let buying_mode: String?
-    let site_id: String?
-    let category_id: String?
+    let buyingMode: String?
+    let siteId: String?
+    let categoryId: String?
     let thumbnail: String?
-    let currency_id: String?
+    let currencyId: String?
     let price: Double?
-    let sold_quantity: Int?
-    let available_quantity: Int?
-    let official_store_id: Int?
-    let accepts_mercadopago: Bool?
+    let soldQuantity: Int?
+    let availableQuantity: Int?
+    let officialStoreId: Int?
+    let acceptsMercadopago: Bool?
     let tags: [String]?
-    let stop_time: String?
-    let catalog_listing: Bool?
-    let inventory_id: String?
+    let stopTime: String?
+    let catalogListing: Bool?
+    let inventoryId: String?
 }

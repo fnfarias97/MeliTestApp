@@ -19,8 +19,13 @@ final class SearchViewController: UIViewController {
     // MARK: - Properties
 
     let presenter: SearchPresenterProtocol
+    var products: [Product] = []
     let searchBar = UISearchBar()
-    // var tableView: UITableView
+    private lazy var tableView: UITableView = {
+        let view = UITableView(frame: .zero, style: .grouped)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
 
     // MARK: - Initializers
 
@@ -34,33 +39,59 @@ final class SearchViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
 
+    // MARK: - View Lifecycle
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         presenter.searchProducts(query: "iPhone X")
-        // tableView.delegate = self
-        // tableView.dataSource = self
+        tableView.register(ProductTableViewCell.self, forCellReuseIdentifier: ProductTableViewCell.reusableIdentifier)
+        tableView.delegate = self
+        tableView.dataSource = self
+        setupViews()
+        setupConstraints()
+    }
+
+    // MARK: - Layout
+
+    private func setupViews() {
+        view.backgroundColor = .white
+        view.addSubview(tableView)
+    }
+
+    private func setupConstraints() {
+        NSLayoutConstraint.activate([
+            tableView.topAnchor.constraint(equalTo: view.topAnchor),
+            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+        ])
     }
 }
 
 // MARK: - UITableViewDelegate, UITableViewDataSource
 
-/* extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
+extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // Return the number of rows in your data source
-        return products.count // Replace `products` with your actual data array
+        return products.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "YourCellIdentifier", for: indexPath) as! YourCustomTableViewCell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: ProductTableViewCell.reusableIdentifier,
+                                                       for: indexPath) as? ProductTableViewCell else {
+            return UITableViewCell()
+        }
 
-        // Configure the cell with the data from your data source
-        let product = products[indexPath.row] // Replace `products` with your actual data array
-        cell.titleLabel.text = product.title // Assuming you have a titleLabel in your custom cell
+        let product = products[indexPath.row]
+        cell.setup(with: product)
 
         return cell
     }
-}*/
+
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return ProductTableViewCell.height
+    }
+}
 
 
 // MARK: - SearchViewProtocol
@@ -75,7 +106,10 @@ extension SearchViewController: SearchViewProtocol {
     }
 
     func displaySearchResults(_ products: [Product]) {
-
+        self.products = products
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
     }
 
     func displayError(_ message: String) {
