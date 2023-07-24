@@ -38,6 +38,8 @@ final class SearchViewController: UIViewController {
         return view
     }()
 
+    private var originalView: UIView?
+
     // MARK: - Initializers
 
     init(presenter: SearchPresenterProtocol = SearchPresenter()) {
@@ -56,6 +58,7 @@ final class SearchViewController: UIViewController {
         super.viewDidLoad()
 
         presenter.searchProducts(query: "iPhone X")
+        originalView = view
         setupLayout()
     }
 
@@ -140,6 +143,7 @@ extension SearchViewController: SearchViewProtocol {
     }
 
     func displaySearchResults(_ products: [Product]) {
+        view = originalView
         self.products = products
         DispatchQueue.main.async {
             self.tableView.reloadData()
@@ -147,8 +151,13 @@ extension SearchViewController: SearchViewProtocol {
     }
 
     func displayError(_ message: String) {
-        // TODO: Complete
+        guard let errorView = Bundle.main.loadNibNamed("ErrorScreen", owner: nil, options: nil)?.first as? ErrorView else {
+            return
+        }
+
+         view = errorView
     }
+
 }
 
 // MARK: - UISearchBarDelegate

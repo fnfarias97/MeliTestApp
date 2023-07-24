@@ -6,3 +6,5 @@
   
 */
 "SearchBar.placeholder" = "Buscar en Mercado Libre";
+"ErrorScreen.title" = "No encontramos publicaciones";
+"ErrorScreen.body" = "Revisa que la palabra esté bien escrita. También puedes probar con menos términos o más generales.";

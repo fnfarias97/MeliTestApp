@@ -8,7 +8,6 @@
 protocol SearchPresenterProtocol: AnyObject {
     var view: SearchViewProtocol? { get set }
     func searchProducts(query: String)
-    func didSelectProduct(_ product: Product)
 }
 
 class SearchPresenter: SearchPresenterProtocol {
@@ -39,12 +38,8 @@ class SearchPresenter: SearchPresenterProtocol {
         }
     }
 
-    func didSelectProduct(_ product: Product) {
-        // TODO: Complete
-    }
-
     func showError() {
-
+        view?.displayError("")
     }
 
 }
