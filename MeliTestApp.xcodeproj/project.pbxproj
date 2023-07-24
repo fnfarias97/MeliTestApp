@@ -32,6 +32,7 @@
 		8CCF79A72A6E24DD00257CBA /* UIView+AutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCF79A62A6E24DD00257CBA /* UIView+AutoLayout.swift */; };
 		8CCF79B72A6E3DA800257CBA /* ErrorScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CCF79B62A6E3DA800257CBA /* ErrorScreen.xib */; };
 		8CCF79B92A6E412C00257CBA /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCF79B82A6E412C00257CBA /* ErrorView.swift */; };
+		8CCF79BD2A6EA80D00257CBA /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 8CCF79BC2A6EA80D00257CBA /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,7 @@
 		8CCF79A62A6E24DD00257CBA /* UIView+AutoLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+AutoLayout.swift"; sourceTree = "<group>"; };
 		8CCF79B62A6E3DA800257CBA /* ErrorScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ErrorScreen.xib; sourceTree = "<group>"; };
 		8CCF79B82A6E412C00257CBA /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		8CCF79BC2A6EA80D00257CBA /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		E809F9F836D4597AD291D070 /* Pods-MeliTestApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeliTestApp.debug.xcconfig"; path = "Target Support Files/Pods-MeliTestApp/Pods-MeliTestApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -144,6 +146,7 @@
 		8C5E111F2A60CC770038A012 /* MeliTestApp */ = {
 			isa = PBXGroup;
 			children = (
+				8CCF79BC2A6EA80D00257CBA /* README.md */,
 				8CCF79902A6B72A500257CBA /* Common */,
 				8CCF79762A66AA7600257CBA /* Scenes */,
 				8C5E11502A60CDF20038A012 /* Models */,
@@ -391,6 +394,7 @@
 			files = (
 				8C5E112D2A60CC790038A012 /* LaunchScreen.storyboard in Resources */,
 				8CCF799A2A6BA11F00257CBA /* Localizable.strings in Resources */,
+				8CCF79BD2A6EA80D00257CBA /* README.md in Resources */,
 				8CCF79B72A6E3DA800257CBA /* ErrorScreen.xib in Resources */,
 				8C5E112A2A60CC790038A012 /* Assets.xcassets in Resources */,
 			);
