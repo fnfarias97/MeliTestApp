@@ -12,7 +12,6 @@ private struct Constants {
     static let margin: CGFloat = 24
 }
 
-
 class DetailViewController: UIViewController {
 
     // MARK: - Properties
@@ -31,8 +30,9 @@ class DetailViewController: UIViewController {
     private lazy var imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.clipsToBounds = true
+        // imageView.clipsToBounds = true
         imageView.contentMode = .scaleAspectFill
+        imageView.autoresizingMask = .flexibleWidth
         return imageView
     }()
 
@@ -44,6 +44,23 @@ class DetailViewController: UIViewController {
         label.font = .systemFont(ofSize: 30)
         return label
     }()
+
+    private lazy var contentView: UIView = {
+        let view = UIView()
+        [mainLabel, imageView, priceLabel].forEach {
+            view.addSubview($0)
+        }
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+
+    private lazy var scrollView: UIScrollView = {
+        let scrollView = UIScrollView()
+        scrollView.translatesAutoresizingMaskIntoConstraints = false
+        return scrollView
+    }()
+
+    private var imageViewHeightConstraint: NSLayoutConstraint?
 
     // MARK: - Initializers
 
@@ -59,37 +76,65 @@ class DetailViewController: UIViewController {
     // MARK: - View Lifecycle
 
     override func viewDidLoad() {
+        super.viewDidLoad()
         setupLayout()
+    }
+
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        scrollView.contentSize = CGSize(width: view.bounds.width, height: contentView.bounds.height)
+    }
+
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+
+        let aspectRatio: CGFloat = size.width > size.height ? 16.0/9.0 : 9.0/16.0
+        imageViewHeightConstraint = imageView.heightAnchor.constraint(equalTo: view.widthAnchor, multiplier: aspectRatio)
     }
 
     // MARK: - Private Utilities
 
     private func setupLayout() {
+        navigationController?.navigationBar.topItem?.title = " "
         view.backgroundColor = .white
+        view.addSubview(scrollView)
+        scrollView.addSubview(contentView)
 
-        [mainLabel, imageView, priceLabel].forEach {
-            view.addSubview($0)
-        }
-
+        setupScrollViewConstraints()
         setupConstraints()
         setupProductDetails()
     }
 
-    private func setupConstraints() {
+    private func setupScrollViewConstraints() {
         NSLayoutConstraint.activate([
-            mainLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: Constants.padding),
-            mainLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: Constants.padding),
-            mainLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -Constants.padding),
+            scrollView.topAnchor.constraint(equalTo: view.topAnchor),
+            scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+        ])
+    }
 
-            imageView.topAnchor.constraint(equalTo: mainLabel.bottomAnchor, constant: Constants.margin),
-            imageView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: Constants.padding),
-            imageView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -Constants.padding),
-            imageView.heightAnchor.constraint(equalTo: imageView.widthAnchor),
+    private func setupConstraints() {
+        contentView.fillSuperView()
+        imageViewHeightConstraint = imageView.heightAnchor.constraint(equalTo: view.widthAnchor, multiplier: 9.0/16.0)
+        imageViewHeightConstraint?.isActive = true
 
-            priceLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: Constants.margin),
-            priceLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: Constants.padding),
-            priceLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -Constants.padding),
-            priceLabel.bottomAnchor.constraint(lessThanOrEqualTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -Constants.padding)
+        NSLayoutConstraint.activate([
+            contentView.widthAnchor.constraint(equalTo: scrollView.widthAnchor),
+
+            mainLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: Constants.padding),
+            mainLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: Constants.padding),
+            mainLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -Constants.padding),
+
+            imageView.topAnchor.constraint(equalTo: mainLabel.bottomAnchor, constant: Constants.padding),
+            imageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: Constants.padding),
+            imageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -Constants.padding),
+
+            priceLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: Constants.padding),
+            priceLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: Constants.padding),
+            priceLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -Constants.padding),
+            priceLabel.bottomAnchor.constraint(lessThanOrEqualTo: contentView.bottomAnchor,
+                                               constant: -Constants.padding)
         ])
     }
 

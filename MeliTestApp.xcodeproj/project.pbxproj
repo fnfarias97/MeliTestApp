@@ -30,6 +30,7 @@
 		8CCF799E2A6BA18D00257CBA /* String+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCF799D2A6BA18D00257CBA /* String+Localized.swift */; };
 		8CCF79A12A6BA2CA00257CBA /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCF79A02A6BA2CA00257CBA /* Colors.swift */; };
 		8CCF79A32A6BA68200257CBA /* MeliSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCF79A22A6BA68200257CBA /* MeliSearchBar.swift */; };
+		8CCF79A72A6E24DD00257CBA /* UIView+AutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCF79A62A6E24DD00257CBA /* UIView+AutoLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,7 @@
 		8CCF799D2A6BA18D00257CBA /* String+Localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localized.swift"; sourceTree = "<group>"; };
 		8CCF79A02A6BA2CA00257CBA /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		8CCF79A22A6BA68200257CBA /* MeliSearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeliSearchBar.swift; sourceTree = "<group>"; };
+		8CCF79A62A6E24DD00257CBA /* UIView+AutoLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+AutoLayout.swift"; sourceTree = "<group>"; };
 		E809F9F836D4597AD291D070 /* Pods-MeliTestApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeliTestApp.debug.xcconfig"; path = "Target Support Files/Pods-MeliTestApp/Pods-MeliTestApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -265,6 +267,7 @@
 				8CCF79922A6B72BF00257CBA /* UIImageView+URL.swift */,
 				8CCF79942A6B94AC00257CBA /* Double+PriceFormatter.swift */,
 				8CCF799D2A6BA18D00257CBA /* String+Localized.swift */,
+				8CCF79A62A6E24DD00257CBA /* UIView+AutoLayout.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -444,6 +447,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8CCF79A32A6BA68200257CBA /* MeliSearchBar.swift in Sources */,
+				8CCF79A72A6E24DD00257CBA /* UIView+AutoLayout.swift in Sources */,
 				8C5E11632A60D4AA0038A012 /* ProductDataManager.swift in Sources */,
 				8CCF79A12A6BA2CA00257CBA /* Colors.swift in Sources */,
 				8CCF79752A66A66200257CBA /* Query.swift in Sources */,
