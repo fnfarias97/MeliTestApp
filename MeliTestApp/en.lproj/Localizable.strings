@@ -1,0 +1,8 @@
+/* 
+  Localizable.strings
+  MeliTestApp
+
+  Created by Fernando Farias on 22/07/2023.
+  
+*/
+"SearchBar.placeholder" = "Buscar en Mercado Libre";

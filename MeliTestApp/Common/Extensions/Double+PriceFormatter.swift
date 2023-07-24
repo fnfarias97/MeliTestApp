@@ -13,6 +13,8 @@ extension Double {
         formatter.numberStyle = .currency
 
         formatter.locale = Locale(identifier: "es_AR")
+        formatter.minimumFractionDigits = 0
+        formatter.maximumFractionDigits = 0
         return formatter.string(from: self as NSNumber)!
     }
 }

@@ -25,6 +25,11 @@
 		8CCF798F2A6B582E00257CBA /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCF798E2A6B582E00257CBA /* ProductTableViewCell.swift */; };
 		8CCF79932A6B72BF00257CBA /* UIImageView+URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCF79922A6B72BF00257CBA /* UIImageView+URL.swift */; };
 		8CCF79952A6B94AC00257CBA /* Double+PriceFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCF79942A6B94AC00257CBA /* Double+PriceFormatter.swift */; };
+		8CCF79972A6B9EA500257CBA /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCF79962A6B9EA500257CBA /* MainNavigationController.swift */; };
+		8CCF799A2A6BA11F00257CBA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8CCF799C2A6BA11F00257CBA /* Localizable.strings */; };
+		8CCF799E2A6BA18D00257CBA /* String+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCF799D2A6BA18D00257CBA /* String+Localized.swift */; };
+		8CCF79A12A6BA2CA00257CBA /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCF79A02A6BA2CA00257CBA /* Colors.swift */; };
+		8CCF79A32A6BA68200257CBA /* MeliSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCF79A22A6BA68200257CBA /* MeliSearchBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +73,11 @@
 		8CCF798E2A6B582E00257CBA /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
 		8CCF79922A6B72BF00257CBA /* UIImageView+URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+URL.swift"; sourceTree = "<group>"; };
 		8CCF79942A6B94AC00257CBA /* Double+PriceFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+PriceFormatter.swift"; sourceTree = "<group>"; };
+		8CCF79962A6B9EA500257CBA /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
+		8CCF799B2A6BA11F00257CBA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		8CCF799D2A6BA18D00257CBA /* String+Localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localized.swift"; sourceTree = "<group>"; };
+		8CCF79A02A6BA2CA00257CBA /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		8CCF79A22A6BA68200257CBA /* MeliSearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeliSearchBar.swift; sourceTree = "<group>"; };
 		E809F9F836D4597AD291D070 /* Pods-MeliTestApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeliTestApp.debug.xcconfig"; path = "Target Support Files/Pods-MeliTestApp/Pods-MeliTestApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -139,6 +149,8 @@
 				8C5E11292A60CC790038A012 /* Assets.xcassets */,
 				8C5E112B2A60CC790038A012 /* LaunchScreen.storyboard */,
 				8C5E112E2A60CC790038A012 /* Info.plist */,
+				8CCF79962A6B9EA500257CBA /* MainNavigationController.swift */,
+				8CCF799C2A6BA11F00257CBA /* Localizable.strings */,
 			);
 			path = MeliTestApp;
 			sourceTree = "<group>";
@@ -200,6 +212,7 @@
 			children = (
 				8CCF79792A66AABC00257CBA /* SearchViewController.swift */,
 				8CCF798E2A6B582E00257CBA /* ProductTableViewCell.swift */,
+				8CCF79A22A6BA68200257CBA /* MeliSearchBar.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -240,6 +253,7 @@
 		8CCF79902A6B72A500257CBA /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				8CCF799F2A6BA2BC00257CBA /* Resources */,
 				8CCF79912A6B72AE00257CBA /* Extensions */,
 			);
 			path = Common;
@@ -250,8 +264,17 @@
 			children = (
 				8CCF79922A6B72BF00257CBA /* UIImageView+URL.swift */,
 				8CCF79942A6B94AC00257CBA /* Double+PriceFormatter.swift */,
+				8CCF799D2A6BA18D00257CBA /* String+Localized.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		8CCF799F2A6BA2BC00257CBA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8CCF79A02A6BA2CA00257CBA /* Colors.swift */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		F7F0635FB6C3E5073FB95E98 /* Pods */ = {
@@ -369,6 +392,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C5E112D2A60CC790038A012 /* LaunchScreen.storyboard in Resources */,
+				8CCF799A2A6BA11F00257CBA /* Localizable.strings in Resources */,
 				8C5E112A2A60CC790038A012 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -419,10 +443,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CCF79A32A6BA68200257CBA /* MeliSearchBar.swift in Sources */,
 				8C5E11632A60D4AA0038A012 /* ProductDataManager.swift in Sources */,
+				8CCF79A12A6BA2CA00257CBA /* Colors.swift in Sources */,
 				8CCF79752A66A66200257CBA /* Query.swift in Sources */,
 				8CCF797E2A66AC5500257CBA /* SearchPresenter.swift in Sources */,
 				8CCF797A2A66AABC00257CBA /* SearchViewController.swift in Sources */,
+				8CCF799E2A6BA18D00257CBA /* String+Localized.swift in Sources */,
 				8C5E11542A60D3040038A012 /* Product.swift in Sources */,
 				8CCF79852A66B24900257CBA /* DetailPresenter.swift in Sources */,
 				8CCF79822A66B23700257CBA /* DetailViewController.swift in Sources */,
@@ -430,6 +457,7 @@
 				8CCF798F2A6B582E00257CBA /* ProductTableViewCell.swift in Sources */,
 				8C5E11212A60CC770038A012 /* AppDelegate.swift in Sources */,
 				8CCF79932A6B72BF00257CBA /* UIImageView+URL.swift in Sources */,
+				8CCF79972A6B9EA500257CBA /* MainNavigationController.swift in Sources */,
 				8C5E11232A60CC770038A012 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -473,6 +501,14 @@
 				8C5E112C2A60CC790038A012 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		8CCF799C2A6BA11F00257CBA /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8CCF799B2A6BA11F00257CBA /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

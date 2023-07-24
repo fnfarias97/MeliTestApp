@@ -20,9 +20,20 @@ final class SearchViewController: UIViewController {
 
     let presenter: SearchPresenterProtocol
     var products: [Product] = []
-    let searchBar = UISearchBar()
+
+    private var searchBar: UISearchBar?
+
     private lazy var tableView: UITableView = {
         let view = UITableView(frame: .zero, style: .grouped)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+
+    private lazy var indicatorView: UIActivityIndicatorView = {
+        let view = UIActivityIndicatorView()
+        view.style = .large
+        view.color = .black
+        view.startAnimating()
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -45,22 +56,33 @@ final class SearchViewController: UIViewController {
         super.viewDidLoad()
 
         presenter.searchProducts(query: "iPhone X")
-        tableView.register(ProductTableViewCell.self, forCellReuseIdentifier: ProductTableViewCell.reusableIdentifier)
-        tableView.delegate = self
-        tableView.dataSource = self
-        setupViews()
-        setupConstraints()
+        setupLayout()
     }
 
     // MARK: - Layout
 
+    private func setupLayout() {
+        setupViews()
+        tableView.register(ProductTableViewCell.self, forCellReuseIdentifier: ProductTableViewCell.reusableIdentifier)
+        tableView.delegate = self
+        tableView.dataSource = self
+        setupConstraints()
+        searchBar = MeliSearchBar(delegate: self)
+        navigationItem.titleView = searchBar
+    }
+
     private func setupViews() {
         view.backgroundColor = .white
-        view.addSubview(tableView)
+        [tableView, indicatorView].forEach {
+            view.addSubview($0)
+        }
     }
 
     private func setupConstraints() {
         NSLayoutConstraint.activate([
+            indicatorView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            indicatorView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+
             tableView.topAnchor.constraint(equalTo: view.topAnchor),
             tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
@@ -91,6 +113,12 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return ProductTableViewCell.height
     }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let product = products[indexPath.row]
+        let viewController = DetailViewController(product: product)
+        navigationController?.pushViewController(viewController, animated: true)
+    }
 }
 
 
@@ -98,11 +126,17 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
 
 extension SearchViewController: SearchViewProtocol {
     func showLoading() {
-
+        DispatchQueue.main.async {
+            self.indicatorView.startAnimating()
+            self.tableView.isHidden = true
+        }
     }
 
     func hideLoading() {
-
+        DispatchQueue.main.async {
+            self.indicatorView.stopAnimating()
+            self.tableView.isHidden = false
+        }
     }
 
     func displaySearchResults(_ products: [Product]) {
@@ -113,7 +147,7 @@ extension SearchViewController: SearchViewProtocol {
     }
 
     func displayError(_ message: String) {
-
+        // TODO: Complete
     }
 }
 
@@ -121,18 +155,15 @@ extension SearchViewController: SearchViewProtocol {
 
 extension SearchViewController: UISearchBarDelegate {
 
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-    }
-
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-
-    }
-
-    @objc func performSearch() {
-
+        if let query = searchBar.text {
+            presenter.searchProducts(query: query)
+        }
+        searchBar.resignFirstResponder()
     }
 
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-
+        searchBar.text = nil
+        searchBar.resignFirstResponder()
     }
 }
